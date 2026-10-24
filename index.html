@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="lock-screen" class="lock-screen">
+      <div class="lock-card">
+        <h1>Game Vault</h1>
+        <p>Enter your password to continue</p>
+        <form id="password-form">
+          <input
+            id="password-input"
+            type="password"
+            placeholder="Password"
+            autocomplete="off"
+            aria-label="Password"
+          />
+          <button type="submit">Unlock</button>
+        </form>
+        <p id="password-error" class="error hidden">Incorrect password</p>
+      </div>
+    </div>
+
+    <div id="app" class="app hidden">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">▣</span>
+          <span>Game Library</span>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-wrap">
+            <span>Search</span>
+            <input id="search-input" type="search" placeholder="Search games..." />
+          </label>
+
+          <button id="fullscreen-btn" class="action-btn" type="button">
+            Fullscreen
+          </button>
+
+          <button id="logout-btn" class="action-btn danger" type="button">
+            Log out
+          </button>
+        </div>
+      </header>
+
+      <main class="main-layout">
+        <aside class="sidebar">
+          <h2>Library</h2>
+          <div id="game-list" class="game-list"></div>
+        </aside>
+
+        <section class="game-area">
+          <div class="game-frame-wrap">
+            <iframe
+              id="game-frame"
+              title="Selected game"
+              src="about:blank"
+              sandbox="allow-scripts allow-modals allow-forms allow-popups allow-same-origin"
+            ></iframe>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="game-list.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

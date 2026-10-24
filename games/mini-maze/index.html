@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Maze</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #0f172a;
+        color: #e2e8f0;
+        font-family: Arial, sans-serif;
+      }
+      .maze-box {
+        padding: 24px;
+        border-radius: 16px;
+        background: rgba(15,23,42,0.8);
+        border: 1px solid rgba(148,163,184,0.35);
+        text-align: center;
+      }
+      .maze {
+        display: grid;
+        grid-template-columns: repeat(5, 34px);
+        gap: 4px;
+        margin: 18px auto;
+      }
+      .cell {
+        width: 34px;
+        height: 34px;
+        background: #334155;
+        border-radius: 6px;
+      }
+      .cell.start { background: #22c55e; }
+      .cell.end { background: #f59e0b; }
+    </style>
+  </head>
+  <body>
+    <div class="maze-box">
+      <h1>Mini Maze</h1>
+      <div class="maze" id="maze"></div>
+      <p>Another sample game placeholder.</p>
+    </div>
+
+    <script>
+      const maze = document.getElementById('maze');
+      const cells = [
+        'start', '', '', '', 'end',
+        '', 'wall', '', 'wall', '',
+        '', 'wall', '', 'wall', '',
+        '', '', '', '', '',
+        '', '', '', '', ''
+      ];
+
+      cells.forEach((cell) => {
+        const div = document.createElement('div');
+        div.className = 'cell ' + (cell || '');
+        maze.appendChild(div);
+      });
+    </script>
+  </body>
+</html>

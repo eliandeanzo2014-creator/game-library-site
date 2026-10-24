@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Game</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #111827, #1f2937);
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .game-box {
+        width: min(80vw, 480px);
+        text-align: center;
+        padding: 32px 20px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+      button {
+        margin-top: 18px;
+        padding: 12px 18px;
+        border: 0;
+        border-radius: 999px;
+        background: #34d399;
+        color: #062b1f;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-box">
+      <h1>Demo Game</h1>
+      <p>Replace this file with your own HTML game.</p>
+      <button onclick="alert('Demo game works!')">Play</button>
+    </div>
+  </body>
+</html>
